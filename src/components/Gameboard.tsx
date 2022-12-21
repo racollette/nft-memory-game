@@ -133,10 +133,12 @@ export const Gameboard = ({ tiles, imageBucket, guesses }: GameBoardProps) => {
       >
         {gameOver === "win" && (
           <>
-            <span className="font-link text-green-500 text-9xl">Victory!</span>
+            <span className="font-link text-green-500 text-5xl sm:text-8xl">
+              Victory!
+            </span>
             <button
               onClick={() => resetGame()}
-              className="font-link pl-12 pr-12 text-3xl bg-black border-green-500 border-4 rounded-2xl mt-8"
+              className="font-link pl-12 pr-12 text-xl sm:text-3xl bg-black border-green-500 border-4 rounded-2xl mt-8"
             >
               Play Again
             </button>
@@ -144,10 +146,12 @@ export const Gameboard = ({ tiles, imageBucket, guesses }: GameBoardProps) => {
         )}
         {gameOver === "loss" && (
           <>
-            <span className="font-link text-red-600 text-9xl">Defeat!</span>
+            <span className="font-link text-red-600 text-5xl sm:text-8xl">
+              Defeat!
+            </span>
             <button
               onClick={() => resetGame()}
-              className="font-link pl-12 pr-12 text-3xl bg-black border-red-600 border-4 rounded-2xl mt-8"
+              className="font-link pl-12 pr-12 text-xl sm:text-3xl bg-black border-red-600 border-4 rounded-2xl mt-8"
             >
               Play Again
             </button>
