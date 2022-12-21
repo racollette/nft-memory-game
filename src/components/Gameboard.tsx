@@ -19,13 +19,16 @@ const cleanBoard = (board: string[][]) =>
     .map(() => new Array(board[0].length).fill(false));
 
 export const Gameboard = ({ tiles, imageBucket, guesses }: GameBoardProps) => {
-  const RANDOM_IMPOSTOR = useMemo(() => Math.ceil(Math.random() * 9), []);
   const [paused, setPaused] = useState<boolean>(false);
   const [board, setBoard] = useState(tiles);
   const [guessesRemaining, setGuessesRemaining] = useState<number>(guesses);
   const [correctGuesses, setCorrectGuesses] = useState<number>(0);
   const [gameOver, setGameOver] = useState<string | undefined>();
   const [revealedBoard, setRevealedBoard] = useState(cleanBoard(board));
+  const RANDOM_IMPOSTOR = useMemo(
+    () => Math.ceil(Math.random() * 9),
+    [gameOver]
+  );
 
   const [previousClick, setPreviousClick] = useState<Tile | undefined>();
 
