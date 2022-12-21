@@ -2,4 +2,4 @@
 
 Simple memory game implementation using React/Typescript. Art courtesy of Impostors (https://impostors.gg).
 
-https://sus-memory.netlify.app/
+Deployed at https://sus-memory.netlify.app/
