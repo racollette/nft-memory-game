@@ -72,14 +72,14 @@ export const Gameboard = ({ tiles, imageBucket, guesses }: GameBoardProps) => {
 
   return (
     <div className="container max-w-2xl">
-      <div className="grid grid-cols-4 gap-6 relative">
+      <div className="grid grid-cols-4 gap-2 sm:gap-6 relative">
         {board.map((row, rowIndex) => (
           <div key={rowIndex}>
             {row.map((tile, colIndex) => (
               <div>
                 <div
                   key={colIndex}
-                  className={`mb-6 ${
+                  className={`mb-2 sm:mb-6 ${
                     gameOver ? "cursor-not-allowed" : "cursor-pointer"
                   }`}
                   onClick={() =>
@@ -119,7 +119,7 @@ export const Gameboard = ({ tiles, imageBucket, guesses }: GameBoardProps) => {
           </div>
         ))}
       </div>
-      <h2 className="font-link text-3xl font-bold">
+      <h2 className="font-link text-xl sm:text-3xl font-bold mt-2">
         {guessesRemaining} Lives Remaining
       </h2>
 
