@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="font-link text-7xl font-bold mb-12">Sus Memory</h1>
+      <h1 className="font-link text-6xl font-bold mb-8">Sus Memory</h1>
       <Gameboard tiles={tiles} imageBucket={IMAGE_BUCKET} guesses={GUESSES} />
     </div>
   );

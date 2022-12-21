@@ -71,7 +71,7 @@ export const Gameboard = ({ tiles, imageBucket, guesses }: GameBoardProps) => {
   };
 
   return (
-    <div className="container max-w-4xl">
+    <div className="container max-w-2xl">
       <div className="grid grid-cols-4 gap-6 relative">
         {board.map((row, rowIndex) => (
           <div key={rowIndex}>
